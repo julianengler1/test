@@ -140,29 +140,65 @@
 <section class="section">
   <div class="container">
     <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Büro</h3>
-        <address>
-          Rolf Messmer<br>
-          3in1<br>
-          Gatterstrasse 31<br>
-          9300 Wittenbach
-        </address>
-        <p>
-          Tel: <a href="tel:+41787220111">+41 78 722 01 11</a><br>
-          Fax: <a href="tel:+41715350313">+41 71 535 03 13</a><br>
-          <a href="mailto:info@dreiineins.ch"><svg style="width:16px;height:16px;vertical-align:-3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg> Mail</a>
-        </p>
+      <div class="contact-card contact-card--form">
+        <h3>Nachricht senden</h3>
+        <p>Erzählen Sie uns kurz von Ihrem Vorhaben &ndash; wir melden uns so rasch wie möglich zurück.</p>
+        <form class="contact-form" action="https://formsubmit.co/info@dreiineins.ch" method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage über dreiineins.ch">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-row">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="Name" autocomplete="name" required>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-email">E-Mail</label>
+            <input type="email" id="cf-email" name="E-Mail" autocomplete="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-phone">Telefon (optional)</label>
+            <input type="tel" id="cf-phone" name="Telefon" autocomplete="tel">
+          </div>
+
+          <div class="form-row">
+            <label for="cf-message">Ihre Nachricht</label>
+            <textarea id="cf-message" name="Nachricht" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Nachricht senden</button>
+          <p class="form-note">Ihre Anfrage geht direkt per E-Mail an info@dreiineins.ch.</p>
+        </form>
       </div>
 
-      <div class="contact-card">
-        <h3>Werkstatt</h3>
-        <address>
-          Rolf Messmer<br>
-          3in1<br>
-          Lindenstrasse 73<br>
-          9000 St. Gallen
-        </address>
+      <div class="contact-addresses">
+        <div class="contact-card">
+          <h3>Büro</h3>
+          <address>
+            Rolf Messmer<br>
+            3in1<br>
+            Gatterstrasse 31<br>
+            9300 Wittenbach
+          </address>
+          <p>
+            Tel: <a href="tel:+41787220111">+41 78 722 01 11</a><br>
+            Fax: <a href="tel:+41715350313">+41 71 535 03 13</a><br>
+            <a href="mailto:info@dreiineins.ch"><svg style="width:16px;height:16px;vertical-align:-3px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg> Mail</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <h3>Werkstatt</h3>
+          <address>
+            Rolf Messmer<br>
+            3in1<br>
+            Lindenstrasse 73<br>
+            9000 St. Gallen
+          </address>
+        </div>
       </div>
     </div>
 
