@@ -16,6 +16,7 @@
   --color-wood-3: #5a3c26;
 
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
 
   --container: 1180px;
   --radius: 10px;
@@ -80,10 +81,16 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-weight: 600;
   line-height: 1.15;
   margin: 0 0 var(--space-2);
   letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.step h3 {
+  font-family: var(--font-body);
 }
 
 p {
@@ -222,29 +229,10 @@ ul {
   color: var(--color-ink);
 }
 
-.brand__mark {
-  width: 46px;
-  height: 46px;
-  flex-shrink: 0;
-}
-
-.brand__text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.brand__name {
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-}
-
-.brand__tagline {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: var(--color-ink-soft);
+.brand__logo {
+  height: 40px;
+  width: auto;
+  display: block;
 }
 
 .nav-toggle {
@@ -293,6 +281,17 @@ ul {
   overflow: hidden;
   color: #fff;
   background: linear-gradient(135deg, var(--color-wood-3), var(--color-wood-2) 55%, var(--color-wood-1));
+}
+
+.hero__watermark {
+  position: absolute;
+  right: -3%;
+  bottom: -12%;
+  width: 46%;
+  max-width: 480px;
+  opacity: 0.1;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero__pattern {
@@ -520,6 +519,7 @@ a.card:hover {
   aspect-ratio: 4 / 3;
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .gallery__body {
@@ -593,21 +593,29 @@ a.card:hover {
 .partners {
   display: flex;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
   flex-wrap: wrap;
 }
 
-.partners img {
-  height: 48px;
-  width: auto;
-  filter: grayscale(1);
-  opacity: 0.75;
-  transition: filter 0.15s ease, opacity 0.15s ease;
+.partner-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.1rem 1.8rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.partners img:hover {
-  filter: none;
-  opacity: 1;
+.partner-badge:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-2px);
 }
 
 /* ---- Contact page ---------------------------------------------------------*/
@@ -791,9 +799,10 @@ a.card:hover {
   margin-bottom: var(--space-2);
 }
 
-.footer-brand__mark {
-  width: 40px;
-  height: 40px;
+.footer-brand__logo {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .site-footer h4 {
