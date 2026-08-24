@@ -280,7 +280,7 @@ ul {
   position: relative;
   overflow: hidden;
   color: #fff;
-  background: linear-gradient(135deg, var(--color-wood-3), var(--color-wood-2) 55%, var(--color-wood-1));
+  background: var(--color-ink);
 }
 
 .hero__watermark {
@@ -297,13 +297,12 @@ ul {
 .hero__pattern {
   position: absolute;
   inset: 0;
-  opacity: 0.5;
-  mix-blend-mode: overlay;
+  opacity: 0.05;
   background-image: repeating-linear-gradient(
     115deg,
-    rgba(255, 255, 255, 0.16) 0px,
-    rgba(255, 255, 255, 0.16) 2px,
-    transparent 2px,
+    rgba(255, 255, 255, 0.5) 0px,
+    rgba(255, 255, 255, 0.5) 1px,
+    transparent 1px,
     transparent 18px
   );
 }
@@ -324,7 +323,7 @@ ul {
   letter-spacing: 0.18em;
   font-weight: 700;
   font-size: 0.8rem;
-  color: #ffd9ad;
+  color: var(--color-accent);
   margin-bottom: var(--space-2);
 }
 
@@ -336,11 +335,11 @@ ul {
 
 .hero__title em {
   font-style: normal;
-  color: #ffcf95;
+  color: var(--color-accent);
 }
 
 .hero__lead {
-  color: #f4e8d8;
+  color: #d8d2c8;
   font-size: 1.15rem;
   max-width: 52ch;
   margin-bottom: var(--space-3);
